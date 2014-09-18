@@ -1,0 +1,121 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../themes/koldafrecent.min.css" />
+	<link rel="stylesheet" href="../themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../themes/jquery.mobile.structure-1.4.2.min.css" />
+    <link rel="stylesheet" href="../themes/main.css"/>
+    <link rel="stylesheet" href="../themes/style/dark.css"/>
+	<script src="../jQuery/jquery.min.js"></script>
+	<script src="../jQuery/jquery.mobile-min.js"></script>
+    <script src="../jQuery/jquery.lwtCountdown-1.0.js"></script>
+    <script src="../cordova.js"></script>
+    <script>
+			document.addEventListener('backbutton',showConfirm(),false);
+        		// process the confirmation dialog result
+			  function onConfirm(buttonIndex) {
+				  navigator.app.exitApp();
+			  }		  
+			   //Show a custom confirmation dialog			  
+			  function showConfirm(){
+					  navigator.notification.confirm(
+						  'Are you sure you want to quit Traffic Tracker?',  // message
+						  onConfirm,              // callback to invoke with index of button pressed
+						  'Exit',            // title
+						  'Yes,No'          // buttonLabels
+					  );
+				  }
+        	</script>
+</head>
+<body >
+    	<div data-role="page" id="page1"  class="main" data-theme="g">
+        	<div data-role="header" data-position="fixed">
+            	<a href="#pop" class="" data-icon="info" data-iconpos="notext">About Me</a>
+            	<h1>Good2Go Batch C 2013/2014</h1>
+            </div>
+            <div data-role="content" >
+            	
+    <!--Starts Here-->
+     <img src="../images/girl.jpg" style="border:none; border-radius:20px; width:20%; height:20%; float:left"/>
+     <h1 style="float:right; padding:5px; text-shadow:#000 2px 2px 5px">CountDown to POP</h1>
+    	 <!-- Countdown dashboard start -->
+		<div id="countdown_dashboard">
+			<div class="dash weeks_dash">
+				<span class="dash_title">weeks</span>
+				<div class="digit">0</div>
+				<div class="digit">0</div>
+			</div>
+
+			<div class="dash days_dash">
+				<span class="dash_title">days</span>
+				<div class="digit">0</div>
+				<div class="digit">0</div>
+			</div>
+
+			<div class="dash hours_dash">
+				<span class="dash_title">hours</span>
+				<div class="digit">0</div>
+				<div class="digit">0</div>
+			</div>
+
+			<div class="dash minutes_dash">
+				<span class="dash_title">minutes</span>
+				<div class="digit">0</div>
+				<div class="digit">0</div>
+			</div>
+
+			<div class="dash seconds_dash">
+				<span class="dash_title">seconds</span>
+				<div class="digit">0</div>
+				<div class="digit">0</div>
+			</div>
+
+		</div>
+		<!-- Countdown dashboard end -->
+        
+    <!--ends here-->
+             </div>	
+             <div class="foot">
+        		<h1>BATCH C 2013/2014</h1> 
+            	<h2>Good2Go</h2>
+       		 </div>
+            <div data-role="footer" data-position="fixed">
+            	<h1>&copy;08097946436 - Kw/13C/0836</h1>
+            </div>
+        </div>
+       	<div data-role="popup" data-theme="g" id="pop" class="ui-content" style="width:90%; height:60%; auto"
+        		data-dismissible="false">
+          <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">
+          Close</a>
+      		<div data-role="content" style="margin:auto; width:90%; background:#F2F2F2; color:#900; border:none; border-radius:10px">
+            	<h1 align="center">CountDown App </h1>
+                <p>This version of CountDown App is specifically designed
+                 for BATCH C 2013/2014 Corps Members.</p>
+				<p>Built By: Koledafe Olawale Sunday<br/>
+				Code Number: Kw/13C/0836
+               </p>
+               <h3 align="center">Dedicated to "The Traffic Guys" My CDS Traffic Control Team</h3>
+               <img src="../images/SAM_2812(edited).jpg" alt="Dedicated to My Traffic Team" style="width:90%; margin:auto; border:none; border-radius:10px;"/>
+               <h3 align="center">Love You All</h3>
+            </div>
+      </div>
+	</body>
+    <script language="javascript" type="text/javascript">
+			jQuery(document).ready(function() {
+				$('#countdown_dashboard').countDown({
+					targetDate: {
+						'day': 		15,
+						'month': 	10,
+						'year': 	2014,
+						'hour': 	11,
+						'min': 		0,
+						'sec': 		0
+					}
+				});
+				
+				$('#email_field').focus(email_focus).blur(email_blur);
+				$('#subscribe_form').bind('submit', function() { return false; });
+			});
+		</script>
+</html>

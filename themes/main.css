@@ -1,0 +1,20 @@
+.foot{
+	color:#C00;
+	text-shadow: #FFF 2px 2px 5px;
+	width:90%;
+	margin: 2px auto;
+	text-align:center;
+	font-size:1.6em;
+	background: rgba(0,0,0,0.4);
+	border-radius:10px;
+	border:none
+}
+.foot h1{
+	margin:5px;
+}
+.foot h2{
+	margin: 1px
+}
+.ui-page {
+    -webkit-backface-visibility: hidden;
+}
